@@ -11,6 +11,7 @@ using Nancy.Json;
 using System.Text;
 using System.ComponentModel;
 
+
 namespace Dashboard.Controllers
 {
     public class CountController : Controller
@@ -22,16 +23,20 @@ namespace Dashboard.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult WSDATAHEWAN()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult WSDATACUSTOMER()
         {
             return View();
         }
 
+        public IActionResult WSDATAADMIN()
+        {
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

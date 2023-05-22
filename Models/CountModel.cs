@@ -9,24 +9,19 @@ namespace Dashboard.Models
 {
     public class CountModel
     {
-
         [DataMember]
-        public string ID_Traffic { get; set; }
-    }
-    public class CountSResponse
-    {
+        public string WSDATAHEWAN { get; set; }
         [DataMember]
-        public string STATUS { get; set; }
+        public string WSDATACUSTOMER { get; set; }
         [DataMember]
-        public string MESSAGE { get; set; }
+        public string WSDATAADMIN { get; set; }
 
     }
-    public class CountS
+    public class Mesage
     {
         [DataMember]
-        public string STATUS { get; set; }
-        [DataMember]
-        public string MESSAGE { get; set; }
+        public string Message { get; set; }
 
     }
 }
+

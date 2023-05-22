@@ -2,22 +2,342 @@
     ViewData["Title"] = "Home Page";
 }
 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Task_1_FE.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sb-admin-2.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/js/sb-admin-2.js" asp-append-version="true" />
+
+    <!---------------------------->
+
+    <body>
+            <!-- Reports -->
+
+            <div class="card">
+
+       
+
+
+                <div class="filter">
+                    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                        <li class="dropdown-header text-start">
+                            <h6>Filter</h6>
+                        </li>
+
+                        <li><a class="dropdown-item" href="#">Today</a></li>
+                        <li><a class="dropdown-item" href="#">This Month</a></li>
+                        <li><a class="dropdown-item" href="#">This Year</a></li>
+                    </ul>
+                </div>
+
+                <div class="card-body">
+                    <h5 class="card-title">Reports <span>/Today</span></h5>
+
+                    <!-- Line Chart -->
+                    <div id="reportsChart"></div>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", () => {
+                            new ApexCharts(document.querySelector("#reportsChart"), {
+                                series: [{
+                                    name: 'WSDATAHEWAN',
+                                    data: [31, 40, 28, 51, 42, 82, 56],
+                                }, {
+                            name: 'WSDATACUSTOMER',
+                                    data: [11, 32, 45, 32, 34, 52, 41]
+                                }, {
+                            name: 'WSDATAADMIN',
+                                    data: [15, 11, 32, 18, 9, 24, 11]
+                                }],
+                                chart: {
+                                    height: 350,
+                                    type: 'area',
+                                    toolbar: {
+                                        show: false
+                                    },
+                                },
+                                markers: {
+                                    size: 4
+                                },
+                                colors: ['#4154f1', '#2eca6a', '#ff771d'],
+                                fill: {
+                                    type: "gradient",
+                                    gradient: {
+                                        shadeIntensity: 1,
+                                        opacityFrom: 0.3,
+                                        opacityTo: 0.4,
+                                        stops: [0, 90, 100]
+                                    }
+                                },
+                                dataLabels: {
+                                    enabled: false
+                                },
+                                stroke: {
+                                    curve: 'smooth',
+                                    width: 2
+                                },
+                                xaxis: {
+                                    type: 'datetime',
+                                    categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                                },
+                                tooltip: {
+                                    x: {
+                                        format: 'dd/MM/yy HH:mm'
+                                    },
+                                }
+                            }).render();
+                        });
+                    </script>
+                    <!-- End Line Chart -->
+
+                </div>
+
+            </div>
+                <!-- End Reports -->
+                <div class="w-100"></div>
+
+                <div class="col">
+
+                    <div class="container">
+                        <div class="row justify-content-md-center">
+                            <div class="col col-sm">
+                                <!----------------------------------------------->
+                                <!-- Recent Activity -->
+                                <img class="card-img-top" src="~/theme/img/peeps.svg" alt="Card image cap">
+                                <div class="card" style="width: 18rem; ">
+                                    <div class="card-body gy-2">
+                                        <h3 class="text-primary">Penjelasan</h3>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-------------------------------------->
+                            <div class="col-sm">
+                                <div class="counter">
+                                    <i class="fa fa-code fa-2x"></i>
+                                    <h2 class="timer count-title count-number" data-to="100" data-speed="1500"></h2>
+                                   
+                                </div>
+
+                                <!-------------------------------------->
+                                <div class="col-sm">
+
+                        <nav class="blocks">
+                            <a href="#" class="block" style="--bg: var(--gradient-1);">
+                                <div class="block__item"></div>
+                            </a>
+                            <a href="#" class="block" style="--bg: var(--gradient-2);">
+                                <div class="block__item"></div>
+                            </a>
+                            <a href="#" class="block" style="--bg: var(--gradient-3);">
+                                <div class="block__item"></div>
+                            </a>
+                            <a href="#" class="block" style="--bg: var(--gradient-4);">
+                                <div class="block__item"></div>
+                            </a>
+                            <a href="#" class="block" style="--bg: var(--gradient-5);">
+                                <div class="block__item"></div>
+                            </a>
+                            <a href="#" class="block" style="--bg: var(--gradient-6);">
+                                <div class="block__item"></div>
+                            </a>
+                            <a href="#" class="block" style="--bg: var(--gradient-7);">
+                                <div class="block__item"></div>
+                            </a>
+                            <a href="#" class="block" style="--bg: var(--gradient-8);">
+                                <div class="block__item"></div>
+                            </a>
+                            <a href="#" class="block" style="--bg: var(--gradient-9);">
+                                <div class="block__item"></div>
+                            </a>
+                        </nav>
+                                    <!-- Website Traffic -->
+                                    <div class="card">
+                                        <div class="filter">
+                                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                                <li class="dropdown-header text-start">
+                                                    <h6>Filter</h6>
+                                                </li>
+
+                                                <li><a class="dropdown-item" href="#">Today</a></li>
+                                                <li><a class="dropdown-item" href="#">This Month</a></li>
+                                                <li><a class="dropdown-item" href="#">This Year</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class=".justify-content-center">
+                                            <h5 class="card-title">Website Traffic <span>| Today</span></h5>
+
+                                            <div id="trafficChart" style="min-height: 400px;" class="echart"></div>
+
+                                            <script>
+                                                document.addEventListener("DOMContentLoaded", () => {
+                                                    echarts.init(document.querySelector("#trafficChart")).setOption({
+                                                        tooltip: {
+                                                            trigger: 'item'
+                                                        },
+                                                        legend: {
+                                                            top: '5%',
+                                                            left: 'center'
+                                                        },
+                                                        series: [{
+                                                            name: 'Access From',
+                                                            type: 'pie',
+                                                            radius: ['40%', '70%'],
+                                                            avoidLabelOverlap: false,
+                                                            label: {
+                                                                show: false,
+                                                                position: 'center'
+                                                            },
+                                                            emphasis: {
+                                                                label: {
+                                                                    show: true,
+                                                                    fontSize: '18',
+                                                                    fontWeight: 'bold'
+                                                                }
+                                                            },
+                                                            labelLine: {
+                                                                show: false
+                                                            },
+                                                            data: [{
+                                                                value: 1048,
+                                                                name: 'Search Engine'
+                                                            },
+                                                            {
+                                                                value: 735,
+                                                                name: 'Direct'
+                                                            },
+                                                            {
+                                                                value: 580,
+                                                                name: 'Email'
+                                                            },
+                                                            {
+                                                                value: 484,
+                                                                name: 'Union Ads'
+                                                            },
+                                                            {
+                                                                value: 300,
+                                                                name: 'Video Ads'
+                                                            }
+                                                            ]
+                                                        }]
+                                                    });
+                                                });
+                                            </script>
+
+                                        </div>
+                                    </div><!-- End Website Traffic -->
+                                </div>
+                                <!-------------------------------------------->
+                                <div class="col">
+                                    <!-- Recent Sales -->
+                                    <div class="align-content-md-center ">
+                                        <div class="card recent-sales overflow-auto">
+
+                                            <div class="filter">
+                                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                                    <li class="dropdown-header text-start">
+                                                        <h6>Filter</h6>
+                                                    </li>
+
+                                                    <li><a class="dropdown-item" href="#">Today</a></li>
+                                                    <li><a class="dropdown-item" href="#">This Month</a></li>
+                                                    <li><a class="dropdown-item" href="#">This Year</a></li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="card-body">
+                                                <h5 class="card-title">Recent Sales <span>| Today</span></h5>
+
+                                                <table class="table table-borderless datatable">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">#</th>
+                                                            <th scope="col">Customer</th>
+                                                            <th scope="col">Product</th>
+                                                            <th scope="col">Price</th>
+                                                            <th scope="col">Status</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row"><a href="#">#2457</a></th>
+                                                            <td>Brandon Jacob</td>
+                                                            <td><a href="#" class="text-primary">At praesentium minu</a></td>
+                                                            <td>$64</td>
+                                                            <td><span class="badge bg-success">Approved</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row"><a href="#">#2147</a></th>
+                                                            <td>Bridie Kessler</td>
+                                                            <td><a href="#" class="text-primary">Blanditiis dolor omnis similique</a></td>
+                                                            <td>$47</td>
+                                                            <td><span class="badge bg-warning">Pending</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row"><a href="#">#2049</a></th>
+                                                            <td>Ashleigh Langosh</td>
+                                                            <td><a href="#" class="text-primary">At recusandae consectetur</a></td>
+                                                            <td>$147</td>
+                                                            <td><span class="badge bg-success">Approved</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row"><a href="#">#2644</a></th>
+                                                            <td>Angus Grady</td>
+                                                            <td><a href="#" class="text-primar">Ut voluptatem id earum et</a></td>
+                                                            <td>$67</td>
+                                                            <td><span class="badge bg-danger">Rejected</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row"><a href="#">#2644</a></th>
+                                                            <td>Raheem Lehner</td>
+                                                            <td><a href="#" class="text-primary">Sunt similique distinctio</a></td>
+                                                            <td>$165</td>
+                                                            <td><span class="badge bg-success">Approved</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+
+                                        </div>
+                                    </div><!-- End Recent Sales -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!------------------------------------------------------>
+
+</body>          
+
+    @section Scripts {
+        <!-- Vendor JS Files -->
+        <script src="theme/vendor/apexcharts/apexcharts.min.js"></script>
+        <script src="theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="theme/vendor/chart.js/chart.umd.js"></script>
+        <script src="theme/vendor/echarts/echarts.min.js"></script>
+        <script src="theme/vendor/quill/quill.min.js"></script>
+        <script src="theme/vendor/simple-datatables/simple-datatables.js"></script>
+        <script src="theme/vendor/tinymce/tinymce.min.js"></script>
+        <script src="theme/vendor/php-email-form/validate.js"></script>
+<link href="~/css/site.css" rel="stylesheet" />
+
+        <!-- Template Main JS File -->
+        <script src="theme/js/main.js"></script>
+
+    }
+ 
 
  
 
 
-@section Scripts {
-    <!-- Vendor JS Files -->
-    <script src="theme/vendor/apexcharts/apexcharts.min.js"></script>
-    <script src="theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="theme/vendor/chart.js/chart.umd.js"></script>                                              
-    <script src="theme/vendor/echarts/echarts.min.js"></script>
-    <script src="theme/vendor/quill/quill.min.js"></script>
-    <script src="theme/vendor/simple-datatables/simple-datatables.js"></script>
-    <script src="theme/vendor/tinymce/tinymce.min.js"></script>
-    <script src="theme/vendor/php-email-form/validate.js"></script>
 
-    <!-- Template Main JS File -->
-    <script src="theme/js/main.js"></script>
 
-}
